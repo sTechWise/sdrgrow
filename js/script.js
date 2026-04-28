@@ -31,18 +31,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.getElementById('navLinks');
 
   if (navToggle && navLinks) {
+    const closeMenu = () => {
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    };
+
     navToggle.addEventListener('click', () => {
       const isActive = navLinks.classList.toggle('active');
       navToggle.classList.toggle('active', isActive);
+      navToggle.setAttribute('aria-expanded', String(isActive));
       document.body.style.overflow = isActive ? 'hidden' : '';
     });
 
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navToggle.classList.remove('active');
-        navLinks.classList.remove('active');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Escape key closes mobile menu and refocuses toggle
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+        closeMenu();
+        navToggle.focus();
+      }
     });
   }
 

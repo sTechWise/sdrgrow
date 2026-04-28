@@ -1,15 +1,80 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us — SDR GROW</title>
   <meta name="description" content="SDR GROW is the outbound operating system built for recruitment agencies. Learn who we are and why we built it.">
-  <meta property="og:title" content="About SDR GROW">
+  <meta name="keywords" content="SDR GROW, outbound automation, recruitment agency, lead generation, structured pipeline, built for recruitment agencies, brand voice, reply rate, reply rates, predictable pipeline, outbound infrastructure, client acquisition, 16-touch outreach, multi-channel outbound">
+  <link rel="canonical" href="https://sdrgrow.com/about">
+  <link rel="alternate" hreflang="en" href="https://sdrgrow.com/about">
+  <link rel="alternate" hreflang="x-default" href="https://sdrgrow.com/about">
+  <meta name="robots" content="index, follow">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sdrgrow.com/about">
+  <meta property="og:title" content="About SDR GROW — Outbound Infrastructure for Recruitment Agencies">
   <meta property="og:description" content="The outbound infrastructure company for recruitment agencies. Learn who we are and why we built this.">
-  <meta property="og:image" content="og-image.png">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="icon" type="image/png" href="logo.png">
-  <link rel="stylesheet" href="style.css">
+  <meta property="og:image" content="https://sdrgrow.com/assets/og-image.png">
+  <meta property="og:site_name" content="SDR GROW">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About SDR GROW — Outbound Infrastructure for Recruitment Agencies">
+  <meta name="twitter:description" content="The outbound infrastructure company for recruitment agencies.">
+  <meta name="twitter:image" content="https://sdrgrow.com/assets/og-image.png">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <meta name="theme-color" content="#20A7C7">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-77X4J912VN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-77X4J912VN');
+  </script>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://sdrgrow.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Us",
+        "item": "https://sdrgrow.com/about"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-77X4J912VN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-77X4J912VN');
+  </script>
+
   <style>
     /* ── About Page Extras ── */
     .about-hero {
@@ -240,24 +305,36 @@
 </head>
 <body>
 
+  <!-- Skip Navigation -->
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+
   <!-- NAVIGATION -->
-  <nav class="navbar" id="navbar">
+  <header role="banner">
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
     <div class="container">
-      <a href="index.html" class="nav-logo">
-        <img src="logo.png" alt="SDR GROW Logo" class="brand-logo"> SDR<span>GROW</span>
+      <a href="/" class="nav-logo" aria-label="SDR GROW Home">
+        <img src="assets/logo.png" alt="SDR GROW Logo" class="brand-logo"> SDR<span>GROW</span>
       </a>
-      <div class="nav-links">
-        <a href="index.html#problem">Problem</a>
-        <a href="index.html#modules">Modules</a>
-        <a href="index.html#value">Pricing</a>
-        <a href="about.html" class="nav-active">About</a>
-        <a href="index.html#book-call" class="nav-cta">Book a Call</a>
+      <div class="nav-links" id="navLinks">
+        <a href="/#problem">Problem</a>
+        <a href="/#modules">Modules</a>
+        <a href="/#value">Pricing</a>
+        <a href="/about" class="nav-active">About</a>
+        <a href="/#book-call" class="nav-cta">Book a Call</a>
       </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
+  </header>
 
 
   <!-- HERO -->
+  <main id="main-content">
+
   <section class="about-hero">
     <div class="container">      <h1>Built by Recruiters,<br><span>For Recruiters</span></h1>
       <p>SDR GROW was founded on one belief: recruitment agencies deserve a predictable, engineered outbound system — not more guesswork.</p>
@@ -348,8 +425,7 @@
       </div>
       <div class="team-note fade-in">
         <p>We built SDR GROW because we lived the problem — inconsistent pipeline, disconnected tools, and expensive hires with no system to hand them. If you want to talk to the people who built this, book a strategy call. No sales team, no handoffs.</p>
-        <!-- TODO: Add team member profile cards here with real names and photos -->
-        <a href="index.html#book-call" class="btn-primary">Book a Call with the Team →</a>
+        <a href="/#book-call" class="btn-primary">Book a Call with the Team →</a>
       </div>
     </div>
   </section>
@@ -364,45 +440,64 @@
     </div>
   </section>
 
+  </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand-col">
-          <div class="footer-brand"><img src="logo.png" alt="SDR GROW Logo" class="brand-logo"> SDR<span>GROW</span></div>
-          <p class="footer-desc">The outbound operating system built for recruitment agencies.</p>
+          <div class="footer-brand"><img src="assets/logo.png" alt="SDR GROW Logo" class="brand-logo"> SDR<span>GROW</span>
+          </div>
+          <p class="footer-desc">The outbound operating system built for recruitment agencies. Predictable pipeline.
+            Qualified conversations. Scalable growth.</p>
         </div>
         <div class="footer-col">
           <h4>Product</h4>
           <ul>
-            <li><a href="index.html#modules">Modules</a></li>
-            <li><a href="index.html#process">16-Touch Engine</a></li>
-            <li><a href="index.html#value">Pricing</a></li>
+            <li><a href="/#modules">Feature Modules</a></li>
+            <li><a href="/#process">16-Touch Engine</a></li>
+            <li><a href="/#value">Pricing</a></li>
+            <li><a href="/#audience">Who It's For</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
           <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/blog">Blog</a></li>
             <li><a href="mailto:hello@sdrgrow.com">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
           <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/privacy#cookies">Cookie Policy</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p class="footer-copy">&copy; 2026 SDR GROW. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/company/sdrgrow" target="_blank" rel="noopener noreferrer" aria-label="Follow SDR GROW on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="none" />
+              <rect x="2" y="9" width="4" height="12" stroke="none" />
+              <circle cx="4" cy="4" r="2" stroke="none" />
+            </svg>
+          </a>
+          <a href="https://x.com/sdrgrow" target="_blank" rel="noopener noreferrer" aria-label="Follow SDR GROW on X (Twitter)">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke="none"
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.min.js" defer></script>
 </body>
 </html>

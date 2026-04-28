@@ -1,15 +1,80 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog — SDR GROW</title>
   <meta name="description" content="Outbound playbooks, research, and insights for recruitment agencies looking to scale client acquisition.">
+  <meta name="keywords" content="SDR GROW, outbound automation, recruitment agency, lead generation, structured pipeline, built for recruitment agencies, brand voice, reply rate, reply rates, predictable pipeline, outbound infrastructure, client acquisition, 16-touch outreach, multi-channel outbound">
+  <link rel="canonical" href="https://sdrgrow.com/blog">
+  <link rel="alternate" hreflang="en" href="https://sdrgrow.com/blog">
+  <link rel="alternate" hreflang="x-default" href="https://sdrgrow.com/blog">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sdrgrow.com/blog">
   <meta property="og:title" content="SDR GROW Blog — Outbound Insights for Recruitment Agencies">
   <meta property="og:description" content="Outbound playbooks, research, and insights for recruitment agencies.">
-  <meta property="og:image" content="og-image.png">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="icon" type="image/png" href="logo.png">
-  <link rel="stylesheet" href="style.css">
+  <meta property="og:image" content="https://sdrgrow.com/assets/og-image.png">
+  <meta property="og:site_name" content="SDR GROW">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SDR GROW Blog — Outbound Insights for Recruitment Agencies">
+  <meta name="twitter:description" content="Outbound playbooks, research, and insights for recruitment agencies.">
+  <meta name="twitter:image" content="https://sdrgrow.com/assets/og-image.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <meta name="theme-color" content="#20A7C7">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-77X4J912VN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-77X4J912VN');
+  </script>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://sdrgrow.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://sdrgrow.com/blog"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-77X4J912VN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-77X4J912VN');
+  </script>
+
   <style>
     /* ── Blog Page Extras ── */
     .blog-hero {
@@ -217,22 +282,34 @@
 </head>
 <body>
 
+  <!-- Skip Navigation -->
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+
   <!-- NAVIGATION -->
-  <nav class="navbar" id="navbar">
+  <header role="banner">
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
     <div class="container">
-      <a href="index.html" class="nav-logo">
-        <img src="logo.png" alt="SDR GROW Logo" class="brand-logo"> SDR<span>GROW</span>
+      <a href="/" class="nav-logo" aria-label="SDR GROW Home">
+        <img src="assets/logo.png" alt="SDR GROW Logo" class="brand-logo"> SDR<span>GROW</span>
       </a>
-      <div class="nav-links">
-        <a href="index.html#problem">Problem</a>
-        <a href="index.html#modules">Modules</a>
-        <a href="index.html#value">Pricing</a>
-        <a href="about.html">About</a>
-        <a href="index.html#book-call" class="nav-cta">Book a Call</a>
+      <div class="nav-links" id="navLinks">
+        <a href="/#problem">Problem</a>
+        <a href="/#modules">Modules</a>
+        <a href="/#value">Pricing</a>
+        <a href="/about">About</a>
+        <a href="/#book-call" class="nav-cta">Book a Call</a>
       </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
+  </header>
 
+
+  <main id="main-content">
 
   <!-- BLOG HERO -->
   <section class="blog-hero">
@@ -254,7 +331,7 @@
           <h2>Why 97% of Recruitment Agency Outreach Gets Ignored (and What to Do Instead)</h2>
           <p>Most agencies send the same five-line cold email to a list of 500 companies and wonder why nobody replies. Here's the data on what actually works — and the exact framework behind our 16-touch engine.</p>
           <div class="blog-meta">March 2026 · 8 min read</div>
-          <a href="#" class="read-more" style="margin-top: 20px; display: inline-flex;">Read the full article →</a>
+          <span class="read-more" style="margin-top: 20px; display: inline-flex; opacity: 0.6; cursor: default;">Coming Soon</span>
         </div>
       </div>
 
@@ -270,7 +347,7 @@
             <h4>How to Build a 1,000-Contact ICP List in Under 48 Hours</h4>
             <p>A step-by-step walkthrough of how we source, filter, and enrich a targeted contact list for a recruitment agency in any niche.</p>
             <div class="blog-meta">February 2026 · 6 min read</div>
-            <a href="#" class="read-more" style="margin-top: 12px; display: inline-flex; font-size: 0.85rem;">Read more →</a>
+            <span class="read-more" style="margin-top: 12px; display: inline-flex; font-size: 0.85rem; opacity: 0.6; cursor: default;">Coming Soon</span>
           </div>
         </div>
         <div class="blog-card fade-in">
@@ -280,7 +357,7 @@
             <h4>The 8-Touch LinkedIn Playbook That's Getting 12% Acceptance Rates</h4>
             <p>Connection requests alone won't cut it. Here's the complete LinkedIn sequence we use — from profile view to final touch — and the message templates behind it.</p>
             <div class="blog-meta">February 2026 · 7 min read</div>
-            <a href="#" class="read-more" style="margin-top: 12px; display: inline-flex; font-size: 0.85rem;">Read more →</a>
+            <span class="read-more" style="margin-top: 12px; display: inline-flex; font-size: 0.85rem; opacity: 0.6; cursor: default;">Coming Soon</span>
           </div>
         </div>
         <div class="blog-card fade-in">
@@ -290,7 +367,7 @@
             <h4>2026 Outbound Benchmarks for Recruitment Agencies</h4>
             <p>What do good outbound metrics actually look like in the recruitment sector? We analysed 50+ agency campaigns to build this benchmark report.</p>
             <div class="blog-meta">January 2026 · 10 min read</div>
-            <a href="#" class="read-more" style="margin-top: 12px; display: inline-flex; font-size: 0.85rem;">Read more →</a>
+            <span class="read-more" style="margin-top: 12px; display: inline-flex; font-size: 0.85rem; opacity: 0.6; cursor: default;">Coming Soon</span>
           </div>
         </div>
         <div class="blog-card fade-in">
@@ -300,7 +377,7 @@
             <h4>Cold Email Deliverability: The Technical Setup No One Talks About</h4>
             <p>Domain warming, DKIM, SPF, DMARC — the boring infrastructure that makes or breaks your entire email campaign. Step-by-step setup guide.</p>
             <div class="blog-meta">January 2026 · 5 min read</div>
-            <a href="#" class="read-more" style="margin-top: 12px; display: inline-flex; font-size: 0.85rem;">Read more →</a>
+            <span class="read-more" style="margin-top: 12px; display: inline-flex; font-size: 0.85rem; opacity: 0.6; cursor: default;">Coming Soon</span>
           </div>
         </div>
         <div class="blog-card fade-in">
@@ -310,7 +387,7 @@
             <h4>Brand Voice in Outbound: Why Generic Messages Kill Reply Rates</h4>
             <p>Your brand voice is your competitive advantage, but most agencies sound exactly like everyone else in the inbox. Here's how to differentiate.</p>
             <div class="blog-meta">December 2025 · 6 min read</div>
-            <a href="#" class="read-more" style="margin-top: 12px; display: inline-flex; font-size: 0.85rem;">Read more →</a>
+            <span class="read-more" style="margin-top: 12px; display: inline-flex; font-size: 0.85rem; opacity: 0.6; cursor: default;">Coming Soon</span>
           </div>
         </div>
         <div class="blog-card fade-in">
@@ -320,7 +397,7 @@
             <h4>How Apex Staffing Went from 1.5% to 11% Reply Rate in 3 Weeks</h4>
             <p>A detailed breakdown of the system changes, sequence structure, and messaging pivots that transformed their outbound performance.</p>
             <div class="blog-meta">December 2025 · 9 min read</div>
-            <a href="#" class="read-more" style="margin-top: 12px; display: inline-flex; font-size: 0.85rem;">Read more →</a>
+            <span class="read-more" style="margin-top: 12px; display: inline-flex; font-size: 0.85rem; opacity: 0.6; cursor: default;">Coming Soon</span>
           </div>
         </div>
       </div>
@@ -334,30 +411,74 @@
     <div class="container">
       <div class="newsletter-box fade-in">        <h2>Get <span>Outbound Insights</span><br>Every Two Weeks</h2>
         <p>No fluff. Just proven frameworks, data, and playbooks from the front lines of recruitment outbound.</p>
-        <div class="newsletter-form">
-          <input type="email" placeholder="your@agency.com" aria-label="Email address">
-          <!-- TODO: Wire this form to your email provider (e.g. Mailchimp, ConvertKit, Beehiiv) -->
+        <form class="newsletter-form" action="mailto:hello@sdrgrow.com" method="POST" enctype="text/plain" aria-label="Newsletter signup">
+          <input type="email" name="email" placeholder="your@agency.com" aria-label="Email address" required>
           <button class="btn-primary" type="submit">Subscribe →</button>
-        </div>
+        </form>
       </div>
     </div>
   </section>
 
 
+  </main>
+
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand"><img src="assets/logo.png" alt="SDR GROW Logo" class="brand-logo"> SDR<span>GROW</span>
+          </div>
+          <p class="footer-desc">The outbound operating system built for recruitment agencies. Predictable pipeline.
+            Qualified conversations. Scalable growth.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/#modules">Feature Modules</a></li>
+            <li><a href="/#process">16-Touch Engine</a></li>
+            <li><a href="/#value">Pricing</a></li>
+            <li><a href="/#audience">Who It's For</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="mailto:hello@sdrgrow.com">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/privacy#cookies">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="footer-bottom">
         <p class="footer-copy">&copy; 2026 SDR GROW. All rights reserved.</p>
-        <div style="display:flex;gap:16px;">
-          <a href="privacy.html" style="color:rgba(255,255,255,0.5);font-size:0.8rem;">Privacy</a>
-          <a href="terms.html" style="color:rgba(255,255,255,0.5);font-size:0.8rem;">Terms</a>
-          <a href="index.html" style="color:rgba(255,255,255,0.5);font-size:0.8rem;">Home</a>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/company/sdrgrow" target="_blank" rel="noopener noreferrer" aria-label="Follow SDR GROW on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="none" />
+              <rect x="2" y="9" width="4" height="12" stroke="none" />
+              <circle cx="4" cy="4" r="2" stroke="none" />
+            </svg>
+          </a>
+          <a href="https://x.com/sdrgrow" target="_blank" rel="noopener noreferrer" aria-label="Follow SDR GROW on X (Twitter)">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke="none"
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.min.js" defer></script>
 </body>
 </html>
