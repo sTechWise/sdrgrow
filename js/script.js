@@ -250,4 +250,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  // ── GA4 CTA Click Tracking ──
+  // Fires a 'cta_click' event for every Book a Call / strategy call button
+  const ctaSelectors = [
+    '.btn-primary[href*="/book"]',
+    '.nav-cta[href*="/book"]',
+    '.btn-ghost[href*="/book"]',
+    '#finalCta'
+  ];
+
+  document.querySelectorAll(ctaSelectors.join(',')).forEach(el => {
+    el.addEventListener('click', () => {
+      if (typeof gtag === 'function') {
+        gtag('event', 'cta_click', {
+          event_category: 'engagement',
+          event_label: el.textContent.trim(),
+          link_url: el.getAttribute('href')
+        });
+      }
+    });
+  });
+
 });

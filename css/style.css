@@ -2242,3 +2242,127 @@ ol {
     font-size: 0.68rem;
   }
 }
+
+/* ============================================
+   BOOK PAGE STYLES
+   ============================================ */
+.book-page-main {
+  background: var(--bg-dark);
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+.book-section {
+  padding: 60px 0 100px;
+  color: white;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.book-copy {
+  max-width: 560px;
+}
+
+.book-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.book-subtitle {
+  font-family: var(--font-paragraph);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 40px;
+}
+
+.book-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.book-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.benefit-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(32, 167, 199, 0.15);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.benefit-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.book-benefit-item h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.book-benefit-item p {
+  font-family: var(--font-paragraph);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+}
+
+.book-testimonial {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.book-testimonial p {
+  font-family: var(--font-paragraph);
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 12px 0;
+}
+
+.book-testimonial .author-info {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.book-testimonial .author-info strong {
+  color: #fff;
+}
+
+.book-widget {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 992px) {
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+}
