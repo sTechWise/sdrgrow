@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cold Email Deliverability: The Technical Setup No One Talks About — SDR GROW</title>
+  <meta name="description" content="Domain warming, DKIM, SPF, DMARC — the technical infrastructure that makes or breaks your email campaigns. Step-by-step setup guide for recruitment agencies.">
+  <meta name="keywords" content="cold email deliverability, SPF DKIM DMARC setup, domain warming email, email infrastructure recruitment, avoid spam folder cold email">
+  <link rel="canonical" href="https://sdrgrow.com/blog/cold-email-deliverability">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://sdrgrow.com/blog/cold-email-deliverability">
+  <meta property="og:title" content="Cold Email Deliverability Setup Guide">
+  <meta property="og:description" content="The technical email setup that determines whether your cold emails reach the inbox or land in spam.">
+  <meta property="og:image" content="https://sdrgrow.com/assets/og-image.png">
+  <meta property="og:site_name" content="SDR GROW">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cold Email Deliverability Setup Guide">
+  <meta name="twitter:image" content="https://sdrgrow.com/assets/og-image.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#20A7C7">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.min.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-77X4J912VN"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-77X4J912VN');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cold Email Deliverability: The Technical Setup No One Talks About","author":{"@type":"Organization","name":"SDR GROW"},"publisher":{"@type":"Organization","name":"SDR GROW"},"datePublished":"2026-01-05","dateModified":"2026-06-28","mainEntityOfPage":"https://sdrgrow.com/blog/cold-email-deliverability"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sdrgrow.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://sdrgrow.com/blog"},{"@type":"ListItem","position":3,"name":"Cold Email Deliverability","item":"https://sdrgrow.com/blog/cold-email-deliverability"}]}</script>
+  <style>.article-hero{padding:100px 0 60px;background:var(--bg-light);border-bottom:1px solid var(--border)}.article-hero h1{font-family:var(--font-display);font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:var(--text-primary);letter-spacing:-.02em;margin-bottom:16px;max-width:720px}.article-hero .blog-meta{font-family:var(--font-body);font-size:.85rem;color:var(--text-muted)}.article-hero .featured-tag{margin-bottom:16px}.article-body{padding:60px 0 80px;background:var(--bg-white)}.article-content{max-width:720px;margin:0 auto}.article-content h2{font-family:var(--font-heading);font-size:1.4rem;font-weight:600;color:var(--text-primary);margin:40px 0 16px}.article-content p{font-family:var(--font-paragraph);font-size:1rem;color:var(--text-secondary);line-height:1.85;margin-bottom:18px}.article-content ul,.article-content ol{padding-left:24px;margin-bottom:18px}.article-content li{font-family:var(--font-paragraph);font-size:.95rem;color:var(--text-secondary);line-height:1.8;margin-bottom:8px}.article-content strong{color:var(--text-primary)}.article-content code{background:var(--bg-light);padding:2px 8px;border-radius:4px;font-size:.88rem;color:var(--accent)}.article-cta{text-align:center;padding:40px;background:var(--bg-light);border:1px solid var(--border);border-radius:var(--radius-lg);margin:40px 0}.article-cta p{margin-bottom:20px}.article-back{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:.88rem;font-weight:500;color:var(--accent);margin-bottom:32px;transition:gap .2s ease}.article-back:hover{gap:12px}</style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <header role="banner"><nav class="navbar" id="navbar" aria-label="Main navigation"><div class="container"><a href="/" class="nav-logo" aria-label="SDR GROW Home"><img src="/assets/logo.webp" alt="SDR GROW Logo" class="brand-logo"> SDR<span>GROW</span></a><div class="nav-links" id="navLinks"><a href="/">Home</a><a href="/about">About</a><a href="/blog" class="nav-active">Blog</a><a href="/book" class="nav-cta">Book a Call</a></div><button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav></header>
+
+  <main id="main-content">
+    <section class="article-hero"><div class="container"><span class="featured-tag">Email</span><h1>Cold Email Deliverability: The Technical Setup No One Talks About</h1><div class="blog-meta">By SDR GROW Team · January 2026 · 5 min read</div></div></section>
+
+    <div style="max-width:720px;margin:0 auto;padding:40px 20px 0;"><img src="/assets/blog-deliverability.png" alt="Illustration of email deliverability and security infrastructure" style="width:100%;border-radius:12px;" loading="lazy"></div>
+
+    <section class="article-body"><div class="container"><div class="article-content">
+      <a href="/blog" class="article-back">← Back to Blog</a>
+
+      <p><strong>Your email copy does not matter if your emails land in spam.</strong> Deliverability is the technical foundation that determines whether prospects see your messages or never know they exist. Most recruitment agencies skip this step and wonder why their campaigns produce zero replies.</p>
+
+      <div class="key-takeaways"><h2 class="takeaways-title">Key Takeaways</h2><ul>
+        <li>SPF, DKIM, and DMARC are required — not optional — for cold email</li>
+        <li>Use separate domains for outbound (never send cold email from your primary domain)</li>
+        <li>Domain warming takes 14–21 days before sending real campaigns</li>
+        <li>Keep daily send volume under 50 emails per mailbox during warming</li>
+        <li>Bounce rates above 5% damage your sender reputation permanently</li>
+      </ul></div>
+
+      <h2>Why Does Deliverability Matter More Than Copy?</h2>
+      <p>A prospect cannot reply to an email they never see. Email providers (Google, Microsoft, Yahoo) use sender reputation scores to decide whether your email reaches the inbox, lands in the promotions tab, or goes straight to spam.</p>
+      <p>Sender reputation is determined by:</p>
+      <ul>
+        <li><strong>Domain age</strong> — New domains have no reputation. They need warming.</li>
+        <li><strong>Authentication records</strong> — SPF, DKIM, and DMARC tell email providers your emails are legitimate.</li>
+        <li><strong>Engagement signals</strong> — Open rates, reply rates, and spam complaints influence future delivery.</li>
+        <li><strong>Bounce rate</strong> — High bounces signal that you are sending to unverified or outdated lists.</li>
+      </ul>
+
+      <h2>What Is SPF, DKIM, and DMARC?</h2>
+      <p>These are DNS records that authenticate your email. Think of them as identity verification for your sending domain.</p>
+      <ul>
+        <li><strong>SPF (Sender Policy Framework):</strong> Tells email providers which servers are allowed to send email on behalf of your domain. Without it, anyone can spoof your address.</li>
+        <li><strong>DKIM (DomainKeys Identified Mail):</strong> Adds a digital signature to each email. The receiving server verifies the signature to confirm the email was not altered in transit.</li>
+        <li><strong>DMARC (Domain-based Message Authentication):</strong> Tells email providers what to do when SPF or DKIM checks fail — reject, quarantine, or accept the message.</li>
+      </ul>
+      <p>All three must be configured correctly. Missing any one of them increases the chance your emails are flagged as suspicious.</p>
+
+      <h2>How Do You Warm a New Sending Domain?</h2>
+      <p>Domain warming is the process of building sender reputation gradually. Here is the standard approach:</p>
+      <ol>
+        <li><strong>Week 1:</strong> Send 10–20 emails per day to engaged recipients (colleagues, existing contacts, warm leads). Focus on generating opens and replies.</li>
+        <li><strong>Week 2:</strong> Increase to 30–40 emails per day. Mix in some cold contacts but keep the ratio tilted toward warm.</li>
+        <li><strong>Week 3:</strong> Scale to 50+ emails per day. Begin your actual outbound sequences with verified contacts only.</li>
+      </ol>
+      <p>During warming, monitor your open rates daily. If open rates drop below 30%, slow down. You are sending too fast for your current reputation level.</p>
+
+      <h2>Why Should I Use a Separate Domain for Outbound?</h2>
+      <p>If you send cold email from <code>youragency.com</code> and your reputation gets damaged, your regular business emails (client communications, invoices, contracts) will also land in spam.</p>
+      <p>Use a separate domain like <code>youragency.io</code> or <code>mail-youragency.com</code> for outbound. If something goes wrong, your primary domain stays protected.</p>
+      <p>Set up multiple mailboxes on the outbound domain (3–5 mailboxes) to distribute sending volume and reduce per-mailbox limits.</p>
+
+      <h2>What Daily Send Volume Is Safe?</h2>
+      <ul>
+        <li><strong>Per mailbox:</strong> 30–50 emails per day for cold outbound</li>
+        <li><strong>Per domain:</strong> 150–250 emails per day (across all mailboxes)</li>
+        <li><strong>Total monthly capacity:</strong> 5,000+ emails with 3–5 warmed mailboxes</li>
+      </ul>
+      <p>Exceeding these limits triggers rate-limiting and spam flags. It is better to add more mailboxes than to push volume through fewer accounts.</p>
+
+      <div class="article-cta">
+        <p><strong>Want us to set up your email infrastructure correctly?</strong></p>
+        <a href="/book" class="btn-primary">Book a Strategy Call →</a>
+      </div>
+
+      <h2>The Bottom Line</h2>
+      <p>Deliverability is the invisible foundation of outbound. Without proper SPF, DKIM, DMARC, domain warming, and volume management, even the best email copy will never reach your prospects. Set up the infrastructure first. Then write the emails. This order matters.</p>
+    </div></div></section>
+  </main>
+
+  <div class="trust-block"><div class="container"><div class="trust-inner"><div class="trust-author"><div class="trust-avatar">SG</div><div class="trust-info"><strong>SDR GROW Team</strong><p>Built by outbound operators and recruitment industry veterans.</p></div></div><div class="trust-dates"><span>Published: January 2026</span><span>Updated: June 2026</span></div></div></div></div>
+  <footer class="footer" role="contentinfo"><div class="container"><div class="footer-grid"><div class="footer-brand-col"><div class="footer-brand"><img src="/assets/logo.webp" alt="SDR GROW Logo" class="brand-logo"> SDR<span>GROW</span></div><p class="footer-desc">The outbound operating system built for recruitment agencies.</p></div><div class="footer-col"><h4>Product</h4><ul><li><a href="/">Feature Modules</a></li><li><a href="/">16-Touch Engine</a></li><li><a href="/">Pricing</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/blog">Blog</a></li><li><a href="mailto:hello@sdrgrow.com">Contact</a></li></ul></div><div class="footer-col"><h4>Legal</h4><ul><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li></ul></div></div><div class="footer-bottom"><p class="footer-copy">&copy; 2026 SDR GROW. All rights reserved.</p></div></div></footer>
+  <script src="/js/script.min.js" defer></script>
+</body>
+</html>
