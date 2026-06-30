@@ -251,6 +251,114 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+  // ── Testimonials Carousel ──
+  const track = document.querySelector('.testimonials-track');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  const dotsContainer = document.querySelector('.carousel-dots-container');
+
+  if (track && dotsContainer) {
+    const cards = Array.from(track.children);
+    let currentIndex = 0;
+    let autoplayTimer = null;
+
+    // Create dots
+    cards.forEach((_, index) => {
+      const dot = document.createElement('button');
+      dot.classList.add('carousel-dot');
+      dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        goToSlide(index);
+        resetAutoplay();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsContainer.children);
+
+    const updateSlidePosition = () => {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    };
+
+    const goToSlide = (index) => {
+      if (index < 0) {
+        currentIndex = cards.length - 1;
+      } else if (index >= cards.length) {
+        currentIndex = 0;
+      } else {
+        currentIndex = index;
+      }
+      updateSlidePosition();
+    };
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        goToSlide(currentIndex - 1);
+        resetAutoplay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        goToSlide(currentIndex + 1);
+        resetAutoplay();
+      });
+    }
+
+    // Touch Swipe Support
+    let startX = 0;
+    let isSwiping = false;
+
+    track.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      isSwiping = true;
+    }, { passive: true });
+
+    track.addEventListener('touchmove', (e) => {
+      if (!isSwiping) return;
+      const diffX = e.touches[0].clientX - startX;
+      if (Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          goToSlide(currentIndex - 1);
+        } else {
+          goToSlide(currentIndex + 1);
+        }
+        isSwiping = false;
+        resetAutoplay();
+      }
+    }, { passive: true });
+
+    track.addEventListener('touchend', () => {
+      isSwiping = false;
+    });
+
+    // Autoplay
+    const startAutoplay = () => {
+      autoplayTimer = setInterval(() => {
+        goToSlide(currentIndex + 1);
+      }, 6000);
+    };
+
+    const resetAutoplay = () => {
+      clearInterval(autoplayTimer);
+      startAutoplay();
+    };
+
+    startAutoplay();
+
+    // Pause on hover
+    const wrapper = document.querySelector('.testimonials-carousel-wrapper');
+    if (wrapper) {
+      wrapper.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
+      wrapper.addEventListener('mouseleave', startAutoplay);
+    }
+  }
+
+
   // ── GA4 CTA Click Tracking ──
   // Fires a 'cta_click' event for every Book a Call / strategy call button
   const ctaSelectors = [
