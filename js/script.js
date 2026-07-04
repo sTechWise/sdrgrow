@@ -380,4 +380,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── Cookie Consent Banner ──
+  const consent = localStorage.getItem("cookie-consent");
+  if (!consent) {
+    createCookieBanner();
+  } else if (consent === "declined") {
+    disableGoogleAnalytics();
+  }
+
+  function createCookieBanner() {
+    const banner = document.createElement("div");
+    banner.id = "cookie-consent-banner";
+    banner.className = "cookie-banner";
+    banner.innerHTML = `
+      <div class="cookie-banner-content">
+        <p>We use cookies to analyze site traffic and optimize your experience. Read our <a href="/privacy#cookies" class="cookie-policy-link">Cookie Policy</a>.</p>
+        <div class="cookie-banner-actions">
+          <button id="cookie-decline" class="btn-cookie-decline">Decline</button>
+          <button id="cookie-accept" class="btn-cookie-accept">Accept All</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(banner);
+
+    // Slide-up animation delay
+    setTimeout(() => {
+      banner.classList.add("show");
+    }, 1000);
+
+    document.getElementById("cookie-accept").addEventListener("click", () => {
+      localStorage.setItem("cookie-consent", "accepted");
+      banner.classList.remove("show");
+      setTimeout(() => banner.remove(), 400);
+    });
+
+    document.getElementById("cookie-decline").addEventListener("click", () => {
+      localStorage.setItem("cookie-consent", "declined");
+      disableGoogleAnalytics();
+      banner.classList.remove("show");
+      setTimeout(() => banner.remove(), 400);
+    });
+  }
+
+  function disableGoogleAnalytics() {
+    window['ga-disable-G-77X4J912VN'] = true;
+  }
+
 });
+

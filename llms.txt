@@ -84,7 +84,7 @@ No. We handle all technical setup — domains, email infrastructure, sequences, 
 
 - Website: https://sdrgrow.com
 - Strategy Call: https://sdrgrow.com/book
-- Email: hello@sdrgrow.com
+- Email: contact@sdrgrow.com
 - LinkedIn: https://linkedin.com/company/sdrgrow
 - X (Twitter): https://x.com/sdrgrow
 
