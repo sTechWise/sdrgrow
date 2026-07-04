@@ -3463,4 +3463,32 @@ header {
     right: 16px;
     max-width: none;
   }
+}
+
+/* Dark FAQ Section Overrides */
+.faq-section-dark {
+  background: var(--bg-dark) !important;
+}
+.faq-section-dark .section-title {
+  color: #fff !important;
+}
+.faq-section-dark .section-subtitle {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+.faq-section-dark .faq-item {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+.faq-section-dark .faq-question {
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+.faq-section-dark .faq-question svg {
+  stroke: rgba(255, 255, 255, 0.6) !important;
+}
+.faq-section-dark .faq-answer {
+  background: transparent !important;
+}
+.faq-section-dark .faq-answer-inner {
+  color: rgba(255, 255, 255, 0.6) !important;
 }
