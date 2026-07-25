@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Infrastructure Checklist Before You Scale Outbound (2026) — SDR GROW</title>
+  <meta name="description" content="Direct answer: Before scaling outbound volume, verify six layers in order: separate sending domains exist and your main domain is untouched, authentication pass...">
+  <meta name="keywords" content="email, infrastructure, checklist, before, scale, outbound">
+  <link rel="canonical" href="https://sdrgrow.com/blog/infrastructure-checklist">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://sdrgrow.com/blog/infrastructure-checklist">
+  <meta property="og:title" content="Email Infrastructure Checklist Before You Scale Outbound (2026)">
+  <meta property="og:description" content="Direct answer: Before scaling outbound volume, verify six layers in order: separate sending domains exist and your main domain is untouched, authentication pass...">
+  <meta property="og:image" content="https://sdrgrow.com/assets/og-image.png">
+  <meta property="og:site_name" content="SDR GROW">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Email Infrastructure Checklist Before You Scale Outbound (2026)">
+  <meta name="twitter:description" content="Direct answer: Before scaling outbound volume, verify six layers in order: separate sending domains exist and your main domain is untouched, authentication pass...">
+  <meta name="twitter:image" content="https://sdrgrow.com/assets/og-image.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#20A7C7">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.min.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-77X4J912VN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-77X4J912VN');
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Email Infrastructure Checklist Before You Scale Outbound (2026)",
+      "author": {
+        "@type": "Person",
+        "name": "Abir Hossain",
+        "jobTitle": "Founder of SDR GROW"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SDR GROW",
+        "url": "https://sdrgrow.com/"
+      },
+      "datePublished": "2026-07-19",
+      "dateModified": "2026-07-19"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does a full infrastructure build take from zero?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Two to four weeks, dominated by warmup, which cannot be compressed honestly. Systems that do it for you compress the labor, not the calendar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the single most skipped layer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The playbook. Everyone monitors, few write down what happens when monitoring finds something, and the difference shows up at the worst moment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I scale list building and infrastructure in parallel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and you should: warmup weeks are perfect for mapping and verifying the market the new capacity will address."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sdrgrow.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://sdrgrow.com/blog"},
+      {"@type": "ListItem", "position": 3, "name": "Email Infrastructure Checklist...", "item": "https://sdrgrow.com/blog/infrastructure-checklist"}
+    ]
+  }
+  </script>
+
+  <style>
+    .article-hero { padding: 100px 0 60px; background: var(--bg-light); border-bottom: 1px solid var(--border); }
+    .article-hero .featured-tag { margin-bottom: 16px; }
+    .article-hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 16px; max-width: 720px; }
+    .article-hero .blog-meta { font-family: var(--font-body); font-size: 0.85rem; color: var(--text-muted); }
+    .article-body { padding: 60px 0 80px; background: var(--bg-white); }
+    .article-content { max-width: 720px; margin: 0 auto; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 600; color: var(--text-primary); margin: 40px 0 16px; }
+    .article-content p { font-family: var(--font-paragraph); font-size: 1rem; color: var(--text-secondary); line-height: 1.85; margin-bottom: 18px; }
+    .article-content ul, .article-content ol { padding-left: 24px; margin-bottom: 18px; }
+    .article-content li { font-family: var(--font-paragraph); font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 8px; }
+    .article-content strong { color: var(--text-primary); }
+    .article-content blockquote { border-left: 3px solid var(--accent); padding: 16px 24px; margin: 24px 0; background: var(--accent-light); border-radius: 0 var(--radius) var(--radius) 0; }
+    .article-content blockquote p { margin: 0; font-style: italic; color: var(--text-primary); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: 24px 0; font-family: var(--font-paragraph); font-size: 0.92rem; }
+    .article-content th { text-align: left; padding: 12px; border-bottom: 2px solid var(--border); color: var(--text-primary); font-weight: 600; }
+    .article-content td { padding: 12px; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-content tr:hover { background: var(--bg-light); }
+    .article-cta { text-align: center; padding: 40px; background: var(--bg-light); border: 1px solid var(--border); border-radius: var(--radius-lg); margin: 40px 0; }
+    .article-cta p { margin-bottom: 20px; }
+    .article-back { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 0.88rem; font-weight: 500; color: var(--accent); margin-bottom: 32px; transition: gap 0.2s ease; }
+    .article-back:hover { gap: 12px; }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <header role="banner">
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+      <div class="container">
+        <a href="/" class="nav-logo" aria-label="SDR GROW Home"><img src="/assets/logo.webp" alt="SDR GROW Logo" class="brand-logo"> SDR<span>GROW</span></a>
+        <div class="nav-links" id="navLinks">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/blog" class="nav-active">Blog</a>
+          <a href="/book" class="nav-cta">Book a Call</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="article-hero">
+      <div class="container">
+        <span class="featured-tag">Email</span>
+        <h1>Email Infrastructure Checklist Before You Scale Outbound (2026)</h1>
+        <div class="blog-meta">By Abir Hossain · July 2026 · 5 min read</div>
+      </div>
+    </section>
+
+    <section class="article-body">
+      <div class="container">
+        <div class="article-content">
+          <a href="/blog" class="article-back">← Back to Blog</a>
+
+          <p><strong>Direct answer:</strong> Before scaling outbound volume, verify six layers in order: separate sending domains exist and your main domain is untouched, authentication passes on every domain, every inbox is individually warmed, rotation is configured with headroom, list verification is structurally enforced, and monitoring runs weekly with a written response playbook. Scaling multiplies whatever exists. Scale a sound foundation and you multiply meetings. Scale a cracked one and you multiply the crack.</p>
+<h2>Key takeaways</h2>
+<ul>
+<li>Scaling is a multiplier, not a strategy. It amplifies the current state.</li>
+<li>The six layers fail in a known order. Check them in that order.</li>
+<li>Headroom is a layer: capacity above current volume is what absorbs surprises.</li>
+<li>The playbook belongs on paper before the incident, not during it.</li>
+</ul>
+<h2>What does each layer require, concretely?</h2>
+<p><strong>Layer one, separation:</strong> two plus brand variant domains carry all cold volume, and the main domain's cold send count is zero, forever. <strong>Layer two, authentication:</strong> SPF, DKIM and DMARC pass on every sending domain, verified this month, with a recheck habit tied to any DNS or tool change. <strong>Layer three, warmup:</strong> every inbox in the pool individually warmed for weeks before campaigns, with maintenance warmup continuing underneath live sending. <strong>Layer four, rotation:</strong> volume distributed across the pool with per inbox caps enforced by software, threads pinned per prospect, and aggregate capacity sitting comfortably above current volume. <strong>Layer five, verification:</strong> lists physically cannot send unverified, bounce alarms set at 3 percent, and purchased lists banned by policy. <strong>Layer six, monitoring:</strong> weekly seed tests per domain, logged, with a written response: who checks, what triggers action, what the recovery sequence is.</p>
+<h2>Why does the order matter?</h2>
+<p>Because each layer assumes the ones before it. Rotation across unwarmed inboxes rotates the damage. Warmup on an unauthenticated domain builds reputation that verification failures then discard. Monitoring without a playbook produces well documented disasters. Auditing in order finds the deepest crack first, which is the one scaling would have found for you, expensively. This layered build is precisely what the <a href="https://sdrgrow.com/">SDR GROW</a> setup phase constructs in its first days, and why the system holds sequences back until the checklist passes: the boring weeks are the ones that make the scaling weeks boring too, in the good way.</p>
+<h2>When are you actually ready to scale?</h2>
+<p>When the checklist passes and two operational signals join it: replies are being answered within hours, because volume that outruns reply handling wastes its own meetings, and current volume has run stable for two plus weeks with clean placement. Then scale the correct way: new inboxes and domains added and warmed, volume stepping up gradually, checklist re run at each step. Scaling is a repeated small decision, not an event.</p>
+<h2>Checklist: the pre scale audit</h2>
+<ul>
+<li>Main domain cold send count: zero.</li>
+<li>Authentication verified passing on every sending domain, dated this month.</li>
+<li>Every pool inbox individually warmed, maintenance warmup active.</li>
+<li>Rotation live, caps software enforced, headroom above 30 percent.</li>
+<li>Verification structurally enforced, bounce alarm at 3 percent.</li>
+<li>Weekly seeds logged, written incident playbook exists.</li>
+<li>Reply handling keeping pace at current volume.</li>
+<li>Two clean, stable weeks at current volume completed.</li>
+</ul>
+<h2>Example</h2>
+<p>An agency lands a big contract and needs triple volume in a month. The audit finds layer two cracked: one sending domain's DMARC broke in a migration nobody noticed. They fix it, warm two new domains during the same fortnight, and scale on schedule with clean placement throughout. Their instinct had been to just raise the caps that afternoon. The audit cost two hours and prevented the version of this story where tripled volume met broken authentication and the contract's first month was spent in spam folders.</p>
+<h2>Mistakes to avoid</h2>
+<ul>
+<li>Scaling by raising per inbox caps, the universal first instinct and universal mistake.</li>
+<li>Auditing once and scaling forever. Each step re runs the list.</li>
+<li>Treating headroom as waste. It is the layer that absorbs reality.</li>
+<li>Scaling sends while replies already sit unanswered for days.</li>
+</ul>
+<h2>FAQ</h2>
+<p><strong>How long does a full infrastructure build take from zero??</strong></p>
+<p>Two to four weeks, dominated by warmup, which cannot be compressed honestly. Systems that do it for you compress the labor, not the calendar.</p>
+<p><strong>What is the single most skipped layer??</strong></p>
+<p>The playbook. Everyone monitors, few write down what happens when monitoring finds something, and the difference shows up at the worst moment.</p>
+<p><strong>Can I scale list building and infrastructure in parallel??</strong></p>
+<p>Yes, and you should: warmup weeks are perfect for mapping and verifying the market the new capacity will address.</p>
+<h2>Related reading</h2>
+<ul>
+<li><a href="https://sdrgrow.com/blog">Inbox Rotation Explained in Plain English</a></li>
+<li><a href="https://sdrgrow.com/blog">What Burns an Email Domain and How to Avoid It</a></li>
+</ul>
+
+          <div class="article-cta">
+            <p><strong>Ready to build predictable pipeline for your agency?</strong></p>
+            <a href="/book" class="btn-primary">Book a Strategy Call →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="trust-block">
+    <div class="container">
+      <div class="trust-inner">
+        <div class="trust-author">
+          <div class="trust-avatar">AH</div>
+          <div class="trust-info">
+            <strong>Abir Hossain</strong>
+            <p>Founder, SDR GROW · Built by outbound operators and recruitment industry veterans.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand"><img src="/assets/logo.webp" alt="SDR GROW Logo" class="brand-logo"> SDR<span>GROW</span></div>
+          <p class="footer-desc">The outbound operating system built for recruitment agencies.</p>
+          <p class="footer-address"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>San Jose, CA</p>
+        </div>
+        <div class="footer-col"><h4>Product</h4><ul><li><a href="/">Feature Modules</a></li><li><a href="/">16-Touch Engine</a></li><li><a href="/">Pricing</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/blog">Blog</a></li><li><a href="mailto:contact@sdrgrow.com">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 SDR GROW. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/script.min.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPF, DKIM and DMARC Explained for Agency Owners (2026) — SDR GROW</title>
+  <meta name="description" content="Direct answer: SPF, DKIM and DMARC are three DNS records that prove your email is really from you. SPF lists which servers may send for your domain. DKIM puts a...">
+  <meta name="keywords" content="dkim, dmarc, explained, agency, owners, 2026">
+  <link rel="canonical" href="https://sdrgrow.com/blog/spf-dkim-dmarc">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://sdrgrow.com/blog/spf-dkim-dmarc">
+  <meta property="og:title" content="SPF, DKIM and DMARC Explained for Agency Owners (2026)">
+  <meta property="og:description" content="Direct answer: SPF, DKIM and DMARC are three DNS records that prove your email is really from you. SPF lists which servers may send for your domain. DKIM puts a...">
+  <meta property="og:image" content="https://sdrgrow.com/assets/og-image.png">
+  <meta property="og:site_name" content="SDR GROW">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SPF, DKIM and DMARC Explained for Agency Owners (2026)">
+  <meta name="twitter:description" content="Direct answer: SPF, DKIM and DMARC are three DNS records that prove your email is really from you. SPF lists which servers may send for your domain. DKIM puts a...">
+  <meta name="twitter:image" content="https://sdrgrow.com/assets/og-image.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#20A7C7">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.min.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-77X4J912VN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-77X4J912VN');
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "SPF, DKIM and DMARC Explained for Agency Owners (2026)",
+      "author": {
+        "@type": "Person",
+        "name": "Abir Hossain",
+        "jobTitle": "Founder of SDR GROW"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SDR GROW",
+        "url": "https://sdrgrow.com/"
+      },
+      "datePublished": "2026-07-19",
+      "dateModified": "2026-07-19"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need to understand DNS to set these up?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Every provider publishes copy paste records, and done for you systems handle it during onboarding. You need to verify they exist, which takes one free online check."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will authentication alone keep me out of spam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is the floor, not the ceiling. Reputation, list quality and behavior build on top of it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the fastest way to check my current state?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any free SPF DKIM DMARC lookup tool, with your domain, in thirty seconds. Do it before your next campaign, not after."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sdrgrow.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://sdrgrow.com/blog"},
+      {"@type": "ListItem", "position": 3, "name": "SPF, DKIM and DMARC Explained ...", "item": "https://sdrgrow.com/blog/spf-dkim-dmarc"}
+    ]
+  }
+  </script>
+
+  <style>
+    .article-hero { padding: 100px 0 60px; background: var(--bg-light); border-bottom: 1px solid var(--border); }
+    .article-hero .featured-tag { margin-bottom: 16px; }
+    .article-hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 16px; max-width: 720px; }
+    .article-hero .blog-meta { font-family: var(--font-body); font-size: 0.85rem; color: var(--text-muted); }
+    .article-body { padding: 60px 0 80px; background: var(--bg-white); }
+    .article-content { max-width: 720px; margin: 0 auto; }
+    .article-content h2 { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 600; color: var(--text-primary); margin: 40px 0 16px; }
+    .article-content p { font-family: var(--font-paragraph); font-size: 1rem; color: var(--text-secondary); line-height: 1.85; margin-bottom: 18px; }
+    .article-content ul, .article-content ol { padding-left: 24px; margin-bottom: 18px; }
+    .article-content li { font-family: var(--font-paragraph); font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 8px; }
+    .article-content strong { color: var(--text-primary); }
+    .article-content blockquote { border-left: 3px solid var(--accent); padding: 16px 24px; margin: 24px 0; background: var(--accent-light); border-radius: 0 var(--radius) var(--radius) 0; }
+    .article-content blockquote p { margin: 0; font-style: italic; color: var(--text-primary); }
+    .article-content table { width: 100%; border-collapse: collapse; margin: 24px 0; font-family: var(--font-paragraph); font-size: 0.92rem; }
+    .article-content th { text-align: left; padding: 12px; border-bottom: 2px solid var(--border); color: var(--text-primary); font-weight: 600; }
+    .article-content td { padding: 12px; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-content tr:hover { background: var(--bg-light); }
+    .article-cta { text-align: center; padding: 40px; background: var(--bg-light); border: 1px solid var(--border); border-radius: var(--radius-lg); margin: 40px 0; }
+    .article-cta p { margin-bottom: 20px; }
+    .article-back { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 0.88rem; font-weight: 500; color: var(--accent); margin-bottom: 32px; transition: gap 0.2s ease; }
+    .article-back:hover { gap: 12px; }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <header role="banner">
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+      <div class="container">
+        <a href="/" class="nav-logo" aria-label="SDR GROW Home"><img src="/assets/logo.webp" alt="SDR GROW Logo" class="brand-logo"> SDR<span>GROW</span></a>
+        <div class="nav-links" id="navLinks">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/blog" class="nav-active">Blog</a>
+          <a href="/book" class="nav-cta">Book a Call</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="article-hero">
+      <div class="container">
+        <span class="featured-tag">Email</span>
+        <h1>SPF, DKIM and DMARC Explained for Agency Owners (2026)</h1>
+        <div class="blog-meta">By Abir Hossain · July 2026 · 4 min read</div>
+      </div>
+    </section>
+
+    <section class="article-body">
+      <div class="container">
+        <div class="article-content">
+          <a href="/blog" class="article-back">← Back to Blog</a>
+
+          <p><strong>Direct answer:</strong> SPF, DKIM and DMARC are three DNS records that prove your email is really from you. SPF lists which servers may send for your domain. DKIM puts a tamper proof signature on each message. DMARC tells receiving inboxes what to do when the first two fail, and reports attempts to impersonate you. Without all three configured, Gmail and Outlook treat your mail as unverifiable, and unverifiable mail goes to spam or nowhere. This is not optimization. Since the major providers tightened bulk sender rules, it is the entry fee.</p>
+<h2>Key takeaways</h2>
+<ul>
+<li>All three records, not one or two. Providers check the set.</li>
+<li>Setup takes under an hour and fails silently when skipped.</li>
+<li>Every sending domain needs its own records, including your cold email domains.</li>
+<li>DMARC also protects your brand from spoofing, a bonus most owners never collect.</li>
+</ul>
+<h2>What does each record do in plain terms?</h2>
+<p><strong>SPF is the guest list.</strong> A DNS entry naming the servers allowed to send as your domain. A receiving inbox checks the sending server against the list. Not listed means suspicious. <strong>DKIM is the wax seal.</strong> Your server signs each outgoing message with a private key, and the public key sits in your DNS. The receiving inbox verifies the seal, proving the message was not altered and genuinely left your systems. <strong>DMARC is the standing instruction.</strong> It tells inboxes how to treat mail failing SPF or DKIM, from monitor to quarantine to reject, and sends you reports on who is sending as you, which is how owners discover spoofing attempts they never knew existed.</p>
+<h2>Why do agencies specifically get burned by this?</h2>
+<p>Because the records break quietly during ordinary business. A website migration overwrites DNS. A new marketing tool gets added without joining the SPF list. A cold email domain gets bought and used before any records exist. Nothing errors, nothing warns, deliverability just decays until someone notices replies died. Recruitment agencies feel it hardest because the niche's heavy outbound reputation means providers extend zero benefit of the doubt to unauthenticated senders. In the <a href="https://sdrgrow.com/">SDR GROW</a> email pipeline, all three records are configured on every sending domain during setup and monitored after, precisely because silent breakage is the standard failure mode.</p>
+<h2>What does correct setup look like?</h2>
+<p>For each sending domain: one SPF record including every legitimate sending service, one DKIM key per sending platform, and a DMARC record starting at monitoring policy and tightening once reports confirm all legitimate mail passes. Then the discipline: recheck after any DNS change, any new tool, any migration. The records are set and forget only until the business changes, which it always does.</p>
+<h2>Checklist: authentication audit</h2>
+<ul>
+<li>SPF present, under the ten lookup limit, covering all senders.</li>
+<li>DKIM signing active on every platform that sends as you.</li>
+<li>DMARC present, reports flowing to a monitored address.</li>
+<li>All three verified on cold email domains, not just the main one.</li>
+<li>Recheck scheduled after every DNS or tooling change.</li>
+</ul>
+<h2>Example</h2>
+<p>An agency's replies fade over three weeks. Investigation finds their SPF record was replaced during a website rebuild, so every campaign since sent unauthenticated. One DNS fix and a fortnight of reputation rebuilding later, placement recovers. Total cause: a web developer who had never heard of SPF. Total cost: a month of pipeline. The records are an hour of work guarding against exactly this.</p>
+<h2>Mistakes to avoid</h2>
+<ul>
+<li>Configuring the main domain and forgetting the sending domains.</li>
+<li>Stacking tools into SPF past the lookup limit, which breaks the record silently.</li>
+<li>Setting DMARC to reject on day one and bouncing your own legitimate mail.</li>
+<li>Treating the reports as noise. They are your spoofing alarm.</li>
+</ul>
+<h2>FAQ</h2>
+<p><strong>Do I need to understand DNS to set these up??</strong></p>
+<p>No. Every provider publishes copy paste records, and done for you systems handle it during onboarding. You need to verify they exist, which takes one free online check.</p>
+<p><strong>Will authentication alone keep me out of spam??</strong></p>
+<p>It is the floor, not the ceiling. Reputation, list quality and behavior build on top of it.</p>
+<p><strong>What is the fastest way to check my current state??</strong></p>
+<p>Any free SPF DKIM DMARC lookup tool, with your domain, in thirty seconds. Do it before your next campaign, not after.</p>
+<h2>Related reading</h2>
+<ul>
+<li><a href="https://sdrgrow.com/blog">How Do You Stop Recruitment Cold Emails Landing in Spam?</a></li>
+<li><a href="https://sdrgrow.com/blog">Email Infrastructure Checklist Before You Scale Outbound</a></li>
+</ul>
+
+          <div class="article-cta">
+            <p><strong>Ready to build predictable pipeline for your agency?</strong></p>
+            <a href="/book" class="btn-primary">Book a Strategy Call →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="trust-block">
+    <div class="container">
+      <div class="trust-inner">
+        <div class="trust-author">
+          <div class="trust-avatar">AH</div>
+          <div class="trust-info">
+            <strong>Abir Hossain</strong>
+            <p>Founder, SDR GROW · Built by outbound operators and recruitment industry veterans.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand"><img src="/assets/logo.webp" alt="SDR GROW Logo" class="brand-logo"> SDR<span>GROW</span></div>
+          <p class="footer-desc">The outbound operating system built for recruitment agencies.</p>
+          <p class="footer-address"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>San Jose, CA</p>
+        </div>
+        <div class="footer-col"><h4>Product</h4><ul><li><a href="/">Feature Modules</a></li><li><a href="/">16-Touch Engine</a></li><li><a href="/">Pricing</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/blog">Blog</a></li><li><a href="mailto:contact@sdrgrow.com">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 SDR GROW. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/script.min.js" defer></script>
+</body>
+</html>
