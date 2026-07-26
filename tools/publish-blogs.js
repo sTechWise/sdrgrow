@@ -147,10 +147,11 @@ for (const blog of toPublish) {
   if (blog.status) blog.status = 'published';
 }
 
-// Write updated files back
-if (fs.existsSync(sitemapPath)) fs.writeFileSync(sitemapPath, sitemapContent, 'utf8');
-if (fs.existsSync(llmsPath)) fs.writeFileSync(llmsPath, llmsContent, 'utf8');
-if (fs.existsSync(blogHtmlPath)) fs.writeFileSync(blogHtmlPath, blogHtmlContent, 'utf8');
-fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf8');
+// Regenerate sitemap.xml automatically
+try {
+  require('./generate-sitemap');
+} catch (e) {
+  console.error('Error generating sitemap:', e);
+}
 
 console.log(`Successfully published ${toPublish.length} blog(s) and updated manifest.json.`);

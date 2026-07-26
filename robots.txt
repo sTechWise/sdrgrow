@@ -55,5 +55,20 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
 # Sitemap
 Sitemap: https://sdrgrow.com/sitemap.xml

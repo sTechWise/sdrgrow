@@ -36,6 +36,11 @@
   ],
   "redirects": [
     {
+      "source": "/blog/apex-staffing-case-study",
+      "destination": "/blog/first-3-weeks-structured-outbound",
+      "permanent": true
+    },
+    {
       "source": "/(.*)\\.html",
       "destination": "/$1",
       "permanent": true

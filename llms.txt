@@ -1,84 +1,66 @@
 # SDR GROW
 
-> The outbound operating system built for recruitment agencies.
+> SDR GROW is an outbound operating system for recruitment and staffing agencies. One person runs a dashboard and produces the output of a full SDR desk: sourced decision-maker contacts, drafted outreach, and a 16-touch sequence across email and LinkedIn that books client meetings.
 
-SDR GROW is a structured 16-touch outbound system that generates predictable pipeline for recruitment agencies without hiring additional SDRs. It combines email and LinkedIn outreach, competitive intelligence, and brand voice alignment into one operating system.
+SDR GROW is built for recruitment agencies, boutique recruiters and staffing firms that have outgrown referrals and need repeatable client acquisition without hiring sales development reps.
 
-## What Is SDR GROW?
+## What it is
 
-SDR GROW replaces the disconnected stack of 5+ tools that most recruitment agencies use for outbound. It provides a unified system with lead sourcing, sequencing, competitive intelligence, and brand voice modules. Agencies use it to move beyond inconsistent referrals and build repeatable client acquisition.
+A structured 16-touch outbound system: 8 email touches and 8 LinkedIn touches coordinated over 60 days. Rather than emailing one contact per company, it reaches every layer — CEO to CEO, manager to managers — each from a matching role and address on the sender side. Most positive replies arrive between touch 5 and touch 12, which is why two-touch sequences underperform.
 
-## Core Offering
+It replaces a stack of disconnected tools: lead data, enrichment, email sending and warming, LinkedIn content, blog and SEO, competitor monitoring.
 
-- **16-Touch Outreach Engine**: 8 email touches + 8 LinkedIn touches in a coordinated multi-channel sequence
-- **8 Power Modules**: Leads, Email Pipeline, Outreach Flow, LinkedIn Spy, Competitors Blogs Spy, Industry Insight, Competitor Mentions, Brand Voice
-- **Built for Recruitment Agencies**: Designed for boutique recruiters, staffing firms, and recruitment agencies
+## The eight modules
 
-## How It Works
-
-1. **Build Your Infrastructure** — We set up your complete outbound system (leads, messaging, channels, intelligence) tailored to your niche.
-2. **Launch Your Sequences** — Your 16-touch outreach engine goes live across email and LinkedIn, targeting your ideal client profile.
-3. **Get Qualified Meetings** — Replies flow in, meetings get booked, and you focus on closing deals.
-
-## Key Capabilities
-
-- Structured outbound infrastructure (not ad-hoc outreach)
-- Designation-matched sender logic (authority-based positioning)
-- Competitor monitoring and interception (up to 10 competitors)
-- Industry intelligence reports (6 report types)
-- Brand voice consistency across all channels
-- LinkedIn engagement and visibility amplification
-- LinkedIn spy and AI-powered content generation
-- Blog spy with SEO and AEO content generation
-- Brand mention monitoring and real-time tracking
-- Behavior-based follow-up sequencing
-- Optional 24/7 dedicated virtual assistant
-
-## Who Is SDR GROW Built For?
-
-- Recruitment agencies doing consistent placements and ready for structured growth
-- Boutique recruiters who have outgrown referrals and need a repeatable pipeline
-- Staffing firms wanting predictable, scalable client acquisition systems
-- Teams tired of inconsistent outbound results and disconnected tooling
-
-## Common Outbound Mistakes
-
-1. Sending generic templates to everyone
-2. Stopping after one or two touches
-3. Using only one channel (email alone)
-4. No competitive intelligence
-5. Hiring SDRs before building a system
-6. Ignoring email deliverability
+- Leads — source, filter and enrich decision-maker contacts
+- Email Pipeline — domain warming, inbox management, deliverability
+- Outreach Flow — multi-touch sequencing across channels
+- LinkedIn Spy — track high-performing content in your niche
+- Blog Spy — identify competitor content driving search traffic
+- Competitor Mentions — alerts when prospects engage competitors
+- Industry Insight — trending topics for timely outreach
+- Brand Voice — tone alignment across every message
 
 ## Pricing
 
-- Setup: $1,997 (one-time)
-- Monthly: $1,200/month
-- Optional VA Add-on: $2,000/month
-- 60-day setup fee guarantee
+- 7-day free trial: full access, no credit card required
+- Setup: $1,997 one-time
+- Monthly: $1,200
+- Optional VA add-on: $2,000/month for hands-off execution
+- Recommended minimum run: 90 days, so domains warm and messaging compounds
+- Setup time: days, not months
 
-## Results
+## Cost comparison
 
-- 8–15% reply rates based on client-reported campaign data (vs. 1–2% industry average)
-- 5,000+ emails per month capacity
-- Predictable, qualified pipeline generation
+Running the same functions manually requires roughly three hires (SDR ~$4,500, lead researcher ~$3,500, content ~$4,000) plus six tools (lead data, enrichment, email warming, LinkedIn content, SEO, competitor monitoring), totalling approximately $17,400/month at list prices. SDR GROW covers the same scope for $1,200/month plus setup, operated by one existing person. A single in-house SDR costs $4,000-$6,000/month before tools and takes 3-6 months to ramp.
 
-## FAQ
+## Expected performance
 
-**Who is SDR GROW built for?**
-Recruitment agencies, boutique recruiters, and staffing firms that want structured outbound pipeline instead of relying on referrals.
+Target reply rates of 8-15% for tightly targeted multi-channel outbound, against a 1-2% baseline for generic single-channel campaigns. Actual results depend on niche, list quality and offer. Sending capacity is 5,000+ emails per month with proper domain warming.
 
-**How long does it take to set up?**
-Most agencies are fully set up and running sequences within days, not months.
+## Who it is for
 
-**What if I already use other outbound tools?**
-SDR GROW replaces disconnected tool stacks with a unified operating system.
+- Recruitment agencies doing consistent placements, ready for structured growth
+- Boutique recruiters who have outgrown referrals
+- Staffing firms wanting predictable client acquisition
+- Teams tired of inconsistent outbound and disconnected tooling
 
-**How is this different from hiring an SDR?**
-An SDR costs $4,000–$6,000/month and takes 3–6 months to onboard. SDR GROW gives you the infrastructure first.
+## Core pages
 
-**Do I need technical skills?**
-No. We handle all technical setup — domains, email infrastructure, sequences, and intelligence modules.
+- [Home](https://sdrgrow.com/): Product overview, module breakdown, 16-touch sequence detail, pricing, and cost comparison against hiring an SDR or building a DIY tool stack.
+- [About](https://sdrgrow.com/about): Who builds and operates SDR GROW.
+- [Book a Call](https://sdrgrow.com/book): Start the 7-day free trial or book a strategy call.
+- [Blog](https://sdrgrow.com/blog): Outbound playbooks, frameworks and technical guides for recruitment agencies.
+
+## Guides and playbooks
+
+- [Why 97% of Recruitment Agency Outreach Gets Ignored](https://sdrgrow.com/blog/why-recruitment-outreach-gets-ignored): What fails in standard agency cold outreach and the framework behind the 16-touch engine.
+- [How to Build a 1,000-Contact ICP List in Under 48 Hours](https://sdrgrow.com/blog/build-icp-list-48-hours): Defining an ideal client profile for a recruitment agency, then sourcing, filtering and enriching a targeted contact list in three stages.
+- [The 8-Touch LinkedIn Playbook](https://sdrgrow.com/blog/linkedin-8-touch-playbook): The complete LinkedIn sequence from profile view through final touch, with the reasoning behind each step.
+- [2026 Outbound Benchmarks for Recruitment Agencies](https://sdrgrow.com/blog/outbound-benchmarks-2026): What reply rates, open rates and meeting rates look like in the recruitment sector.
+- [Cold Email Deliverability: The Technical Setup](https://sdrgrow.com/blog/cold-email-deliverability): Domain warming, SPF, DKIM and DMARC configuration for agency outbound.
+- [Brand Voice in Outbound](https://sdrgrow.com/blog/brand-voice-outbound): Why generic messaging suppresses reply rates and how to differentiate.
+- [What the First 3 Weeks of Structured Outbound Looks Like](https://sdrgrow.com/blog/first-3-weeks-structured-outbound): A modeled walkthrough of infrastructure setup, launch and compounding for a 12-person recruitment agency.
 
 - [7 Best Outbound Systems for Recruitment Agencies (2026)](https://sdrgrow.com/blog/best-outbound-systems-recruitment-agencies)
 
@@ -88,25 +70,7 @@ No. We handle all technical setup — domains, email infrastructure, sequences, 
 
 ## Contact
 
-- Website: https://sdrgrow.com
-- Strategy Call: https://sdrgrow.com/book
 - Email: contact@sdrgrow.com
 - LinkedIn: https://linkedin.com/company/sdrgrow
-- X (Twitter): https://x.com/sdrgrow
-
-## Pages
-
-- Home: https://sdrgrow.com
-- About: https://sdrgrow.com/about
-- Blog: https://sdrgrow.com/blog
-- Book a Call: https://sdrgrow.com/book
-
-## Blog Posts
-
-- Why 97% of Recruitment Agency Outreach Gets Ignored: https://sdrgrow.com/blog/why-recruitment-outreach-gets-ignored
-- How to Build a 1,000-Contact ICP List in 48 Hours: https://sdrgrow.com/blog/build-icp-list-48-hours
-- The 8-Touch LinkedIn Playbook: https://sdrgrow.com/blog/linkedin-8-touch-playbook
-- 2026 Outbound Benchmarks for Recruitment Agencies: https://sdrgrow.com/blog/outbound-benchmarks-2026
-- Cold Email Deliverability Setup Guide: https://sdrgrow.com/blog/cold-email-deliverability
-- Brand Voice in Outbound: https://sdrgrow.com/blog/brand-voice-outbound
-- Case Study — Apex Staffing: https://sdrgrow.com/blog/apex-staffing-case-study
+- X: https://x.com/sdrgrow
+- Location: San Jose, CA

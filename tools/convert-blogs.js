@@ -35,7 +35,6 @@ function extractSchema(filename) {
 }
 
 function generateArticleSchema(title, description, slug) {
-    const date = "2026-07-19T08:00:00+08:00";
     return `<script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -49,8 +48,8 @@ function generateArticleSchema(title, description, slug) {
   "image": "https://sdrgrow.com/assets/og-image.png",
   "author": {
     "@type": "Person",
-    "name": "Abir Hossain",
-    "url": "https://sdrgrow.com/about"
+    "name": "Abir",
+    "url": "https://linkedin.com/company/sdrgrow"
   },
   "publisher": {
     "@type": "Organization",
@@ -60,8 +59,8 @@ function generateArticleSchema(title, description, slug) {
       "url": "https://sdrgrow.com/assets/logo.png"
     }
   },
-  "datePublished": "${date}",
-  "dateModified": "${date}"
+  "datePublished": "2026-07-01",
+  "dateModified": "2026-07-01"
 }
 </script>`;
 }
@@ -356,7 +355,7 @@ const template = `<!DOCTYPE html>
       <div class="container">
         <span class="featured-tag">{TAG}</span>
         <h1>{TITLE}</h1>
-        <div class="blog-meta">By Abir Hossain · July 2026 · {READ_TIME}</div>
+        <div class="blog-meta">By <a href="https://linkedin.com/company/sdrgrow" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">Abir, Founder of SDR GROW</a> · July 2026 · {READ_TIME}</div>
       </div>
     </section>
 
@@ -382,9 +381,12 @@ const template = `<!DOCTYPE html>
         <div class="trust-author">
           <div class="trust-avatar">AH</div>
           <div class="trust-info">
-            <strong>Abir Hossain</strong>
-            <p>Founder, SDR GROW · Built by outbound operators and recruitment industry veterans.</p>
+            <strong><a href="https://linkedin.com/company/sdrgrow" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Abir, Founder of SDR GROW</a></strong>
+            <p>Founder of SDR GROW. Builds outbound systems for recruitment and staffing agencies.</p>
           </div>
+        </div>
+        <div class="trust-dates">
+          <span>Published: July 2026</span>
         </div>
       </div>
     </div>
@@ -398,7 +400,7 @@ const template = `<!DOCTYPE html>
           <p class="footer-desc">The outbound operating system built for recruitment agencies.</p>
           <p class="footer-address"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>San Jose, CA</p>
         </div>
-        <div class="footer-col"><h4>Product</h4><ul><li><a href="/">Feature Modules</a></li><li><a href="/">16-Touch Engine</a></li><li><a href="/">Pricing</a></li></ul></div>
+        <div class="footer-col"><h4>Product</h4><ul><li><a href="/#modules">Feature Modules</a></li><li><a href="/#process">16-Touch Engine</a></li><li><a href="/#value">Pricing</a></li></ul></div>
         <div class="footer-col"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/blog">Blog</a></li><li><a href="mailto:contact@sdrgrow.com">Contact</a></li></ul></div>
         <div class="footer-col"><h4>Legal</h4><ul><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li></ul></div>
       </div>
