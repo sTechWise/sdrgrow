@@ -33,6 +33,7 @@ build/
 *.bak
 *.swp
 *.log
+scratch/
 
 # ── Environment / secrets ─────────────────────
 .env
