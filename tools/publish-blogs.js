@@ -147,6 +147,11 @@ for (const blog of toPublish) {
   if (blog.status) blog.status = 'published';
 }
 
+// Write updated contents back to disk
+fs.writeFileSync(llmsPath, llmsContent, 'utf8');
+fs.writeFileSync(blogHtmlPath, blogHtmlContent, 'utf8');
+fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf8');
+
 // Regenerate sitemap.xml automatically
 try {
   require('./generate-sitemap');
@@ -155,3 +160,4 @@ try {
 }
 
 console.log(`Successfully published ${toPublish.length} blog(s) and updated manifest.json.`);
+
