@@ -114,8 +114,23 @@ for (const blog of toPublish) {
   const readTime = blog.readTime || blog.read_time || '5 min read';
   const cardDate = blog.date || 'July 2026';
 
+  const imgMap = {
+    'Comparison': 'assets/blog-deliverability.png',
+    'Lead Generation': 'assets/blog-leads.png',
+    'Email': 'assets/blog-deliverability.png',
+    'LinkedIn': 'assets/blog-linkedin.png',
+    'Strategy': 'assets/blog-outreach.png',
+    'Pricing': 'assets/blog-benchmarks.png',
+    'Niche': 'assets/blog-outreach.png',
+    'Copywriting': 'assets/blog-brandvoice.png',
+    'Intelligence': 'assets/blog-benchmarks.png'
+  };
+  const coverImg = imgMap[tag] || 'assets/blog-outreach.png';
+
   const cardHtml = `          <div class="blog-card fade-in">
-            <a href="/blog/${slug}" class="blog-card-img" style="background: linear-gradient(135deg, var(--accent-light), var(--primary-light)); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.1rem; color: var(--accent); text-align: center; padding: 20px;">${tag}</a>
+            <a href="/blog/${slug}" class="blog-card-img" style="background: none; overflow: hidden; display: block;">
+              <img src="${coverImg}" alt="${title}" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            </a>
             <div class="blog-card-body">
               <span class="featured-tag">${tag}</span>
               <h4><a href="/blog/${slug}" style="color: inherit; text-decoration: none;">${title}</a></h4>
