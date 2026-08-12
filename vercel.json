@@ -36,6 +36,12 @@
   ],
   "redirects": [
     {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "www.sdrgrow.com" }],
+      "destination": "https://sdrgrow.com/:path",
+      "permanent": true
+    },
+    {
       "source": "/blog/apex-staffing-case-study",
       "destination": "/blog/first-3-weeks-structured-outbound",
       "permanent": true
