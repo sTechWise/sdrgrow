@@ -110,6 +110,12 @@ Target reply rates of 8-15% for tightly targeted multi-channel outbound, against
 
 - [SDR GROW vs lemlist for Recruitment Agencies (2026)](https://sdrgrow.com/blog/sdr-grow-vs-lemlist)
 
+- [SDR GROW vs Building Your Own Tool Stack (2026)](https://sdrgrow.com/blog/sdr-grow-vs-diy-stack)
+
+- [SDR GROW vs a Lead Generation Agency (2026)](https://sdrgrow.com/blog/sdr-grow-vs-lead-gen-agency)
+
+- [Cold Email vs LinkedIn Outreach for Recruiters: Which Wins? (2026)](https://sdrgrow.com/blog/cold-email-vs-linkedin)
+
 ## Contact
 
 - Email: contact@sdrgrow.com
