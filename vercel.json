@@ -42,6 +42,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/alternatives-to-hiring-sdr",
+      "destination": "/blog/alternative-to-hiring-an-sdr-for-recruitment-agencies",
+      "permanent": true
+    },
+    {
+      "source": "/blog/email-deliverability",
+      "destination": "/blog/cold-email-deliverability",
+      "permanent": true
+    },
+    {
       "source": "/blog/apex-staffing-case-study",
       "destination": "/blog/first-3-weeks-structured-outbound",
       "permanent": true

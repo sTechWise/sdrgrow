@@ -27,7 +27,14 @@ jobs:
       
       - name: Run publish script
         run: node tools/publish-blogs.js ${{ github.event.inputs.count || '3' }}
-      
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Blog health check
+        run: python tools/blog_health_check.py --ci
+
       - name: Commit and push
         run: |
           git config user.name 'github-actions[bot]'
