@@ -108,6 +108,8 @@ async function sendIndexNowPing(urls) {
 
     if (status === 200 || status === 202) {
       console.log(`\nSUCCESS: ${status} ${status === 200 ? 'OK' : 'Accepted'} — IndexNow successfully received submission.`);
+    } else if (status === 403) {
+      console.log(`\nNOTE: HTTP 403 (Key Not Verified Yet). Push key file (${KEY_LOCATION}) to live production site first so IndexNow can verify key ownership.`);
     } else {
       console.error(`\nFAILURE: HTTP ${status} — ${bodyText}`);
       process.exit(1);
