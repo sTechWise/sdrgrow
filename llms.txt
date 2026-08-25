@@ -179,6 +179,12 @@ Target reply rates of 8-15% for tightly targeted multi-channel outbound, against
 
 - [How to Build Authority on LinkedIn Without Posting Daily (2026)](https://sdrgrow.com/blog/authority-without-daily-posting)
 
+- [LinkedIn Mistakes That Get Recruiter Accounts Restricted (2026)](https://sdrgrow.com/blog/linkedin-restriction-mistakes)
+
+- [How to Fix Cold Emails That Already Land in Spam (2026)](https://sdrgrow.com/blog/fix-spam-placement)
+
+- [SPF, DKIM and DMARC Explained for Agency Owners (2026)](https://sdrgrow.com/blog/spf-dkim-dmarc)
+
 ## Contact
 
 - Email: contact@sdrgrow.com
