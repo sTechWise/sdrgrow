@@ -140,36 +140,35 @@ for (const blog of toPublish) {
             </div>
           </div>\n`;
 
-  // Find the blog-grid div and insert the card at the end of it, before the closing tags.
-  // Strategy: find "<!-- NEWSLETTER -->" and work backwards to find the right insertion point
-  // within the grid. We insert the card just before the grid's closing </div>.
-  const NEWSLETTER_MARKER = '<!-- NEWSLETTER -->';
-  const newsletterPos = blogHtmlContent.indexOf(NEWSLETTER_MARKER);
-  if (newsletterPos !== -1) {
-    // The structure before NEWSLETTER is:  ...cards...</div>\n      </div>\n    </section>
-    // We need to find the </section> that closes blog-body, then go back past </div></div></section>
-    // to insert the card inside the grid.
-    const before = blogHtmlContent.slice(0, newsletterPos);
-    
-    // Find the last </section> before NEWSLETTER (that's the blog-body section close)
-    const lastSectionClose = before.lastIndexOf('</section>');
-    if (lastSectionClose !== -1) {
-      // Find the </div> before </section> — that's the container close
-      const containerClose = before.lastIndexOf('</div>', lastSectionClose);
-      // Find the </div> before that — that's the grid close
-      const gridClose = before.lastIndexOf('</div>', containerClose - 1);
-      if (gridClose !== -1) {
-        // Insert card before the grid close
-        blogHtmlContent = blogHtmlContent.slice(0, gridClose) + cardHtml + blogHtmlContent.slice(gridClose);
-        console.log(`Inserted card for ${slug} into blog.html`);
+  // Step 3d: Insert card into blog.html
+  const GRID_END_MARKER = '<!-- END_BLOG_GRID -->';
+  if (blogHtmlContent.includes(`/blog/${slug}`)) {
+    console.log(`Card for ${slug} already exists in blog.html, skipping insertion.`);
+  } else if (blogHtmlContent.includes(GRID_END_MARKER)) {
+    blogHtmlContent = blogHtmlContent.replace(GRID_END_MARKER, `${cardHtml}          ${GRID_END_MARKER}`);
+    console.log(`Inserted card for ${slug} into blog.html`);
+  } else {
+    // Fallback: search for grid close before newsletter
+    const NEWSLETTER_MARKER = '<!-- NEWSLETTER -->';
+    const newsletterPos = blogHtmlContent.indexOf(NEWSLETTER_MARKER);
+    if (newsletterPos !== -1) {
+      const before = blogHtmlContent.slice(0, newsletterPos);
+      const lastSectionClose = before.lastIndexOf('</section>');
+      if (lastSectionClose !== -1) {
+        const containerClose = before.lastIndexOf('</div>', lastSectionClose);
+        const gridClose = before.lastIndexOf('</div>', containerClose - 1);
+        if (gridClose !== -1) {
+          blogHtmlContent = blogHtmlContent.slice(0, gridClose) + cardHtml + `          ${GRID_END_MARKER}\n` + blogHtmlContent.slice(gridClose);
+          console.log(`Inserted card for ${slug} into blog.html with marker`);
+        } else {
+          console.error(`Could not find grid closing tag for ${slug}`);
+        }
       } else {
-        console.error(`Could not find grid closing tag for ${slug}`);
+        console.error(`Could not find </section> before NEWSLETTER for ${slug}`);
       }
     } else {
-      console.error(`Could not find </section> before NEWSLETTER for ${slug}`);
+      console.error(`Could not find NEWSLETTER marker in blog.html for ${slug}`);
     }
-  } else {
-    console.error(`Could not find NEWSLETTER marker in blog.html for ${slug}`);
   }
 
   // Step 4: Update manifest item status

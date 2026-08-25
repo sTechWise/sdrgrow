@@ -13,6 +13,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: publish-blogs
+  cancel-in-progress: false
+
 jobs:
   publish:
     runs-on: ubuntu-latest
